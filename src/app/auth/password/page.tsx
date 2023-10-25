@@ -9,6 +9,8 @@ export default function Password() {
           </label>
           <input
             type="email"
+            id="email"
+            name="email"
             placeholder="Enter the Email"
             className="w-full px-4 py-2 mt-2 text-gray-700 rounded-md focus:outline-none focus:ring"
             required

@@ -9,6 +9,8 @@ export default function Login() {
           </label>
           <input
             type="email"
+            id="email"
+            name="email"
             placeholder="Enter the Email"
             className="w-full px-4 py-2 mt-2 text-gray-700 rounded-md focus:outline-none focus:ring"
             required
@@ -20,6 +22,8 @@ export default function Login() {
           </label>
           <input
             type="password"
+            id="password"
+            name="password"
             className="w-full px-4 py-2 mt-2 text-gray-700 border rounded-md focus:outline-none focus:ring"
             required
           />
