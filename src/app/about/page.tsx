@@ -1,4 +1,4 @@
-export default function Home() {
+export default function About() {
   return (
     <div className="container mx-auto">
       <nav className="bg-gray-800 p-4">
@@ -18,8 +18,8 @@ export default function Home() {
       </nav>
 
       <div className="mt-8 text-center">
-        <h1 className="text-4xl font-bold">Welcome to Next.js!</h1>
-        <p className="mt-4 text-lg">This is the home page of your website.</p>
+        <h1 className="text-4xl font-bold">About Us</h1>
+        <p className="mt-4 text-lg">This is the about page of your website.</p>
       </div>
     </div>
   );
