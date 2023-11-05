@@ -46,9 +46,12 @@ export default function Register() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <h1 className="text-white text-3xl mb-4">Register</h1>
-      <form className="mt-6" onSubmit={handleRegister}>
+    <div className="flex flex-col justify-center items-center h-screen mx-auto max-w-md">
+      <h1 className="text-white text-3xl mb-4">Welcome</h1>
+      <form
+        className="mt-6 w-full max-w-xs md:max-w-md xl:max-w-lg"
+        onSubmit={handleRegister}
+      >
         <div className="mb-2">
           <label htmlFor="username" className="text-sm">
             Username
@@ -97,7 +100,7 @@ export default function Register() {
             required
           />
           {errors.password && (
-            <span className="text-red-500 text-sm">{errors.password}</span>
+            <span className="text-red-500 text-sm mt-2">{errors.password}</span>
           )}
         </div>
         <div className="mb-2">
@@ -116,7 +119,9 @@ export default function Register() {
             required
           />
           {errors.passwordConf && (
-            <span className="text-red-500 text-sm">{errors.passwordConf}</span>
+            <span className="text-red-500 text-sm mt-2">
+              {errors.passwordConf}
+            </span>
           )}
         </div>
         <div className="mt-auto">
@@ -128,7 +133,7 @@ export default function Register() {
             Register
           </button>
         </div>
-        <div className="flex justify-center mt-1 text-sm">
+        <div className="flex justify-center mt-5 text-sm">
           <span className="me-1">Already have an account?</span>
           <a
             href="/auth/login"

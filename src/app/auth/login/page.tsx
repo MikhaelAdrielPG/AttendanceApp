@@ -1,7 +1,7 @@
 export default function Login() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <h1 className="text-white text-3xl mb-4">Login</h1>
+      <h1 className="text-white text-3xl mb-4">Welcome</h1>
       <form className="mt-6">
         <div className="mb-2">
           <label htmlFor="email" className="text-sm">
@@ -38,7 +38,7 @@ export default function Login() {
           <button className="w-full px-4 py-2 mt-5 text-white bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
             Login
           </button>
-          <div className="flex justify-center mt-1 text-sm">
+          <div className="flex justify-center mt-5 text-sm">
             <span className="me-1">Don't have account ?</span>
             <a
               href="/auth/register"
