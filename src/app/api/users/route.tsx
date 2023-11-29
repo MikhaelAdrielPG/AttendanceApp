@@ -41,7 +41,9 @@ export async function POST(request: NextRequest) {
     try {
         let user = await User.create({
             name: request.nextUrl.searchParams.get("name"),
-            email: request.nextUrl.searchParams.get("email")
+            email: request.nextUrl.searchParams.get("email"),
+            arrival: request.nextUrl.searchParams.get("arrival"),
+            departure: request.nextUrl.searchParams.get("departure")
         });
         return handleResponse(user, 'Error creating user');
     } catch (error: any) {
@@ -56,11 +58,17 @@ export async function PUT(request: NextRequest) {
     }
 
     try {
-        let user = await User.findByIdAndUpdate(request.nextUrl.searchParams.get("id"), {
-            email: request.nextUrl.searchParams.get("email")
-        }, {
-            returnOriginal: false
-        });
+        let user = await User.findByIdAndUpdate(
+            request.nextUrl.searchParams.get("id"),
+            {
+                email: request.nextUrl.searchParams.get("email"),
+                arrival: request.nextUrl.searchParams.get("arrival"),
+                departure: request.nextUrl.searchParams.get("departure")
+            },
+            {
+                returnOriginal: false
+            }
+        );
         return handleResponse(user, 'Error updating user');
     } catch (error: any) {
         return Response.json({ error: (error as Error).message });

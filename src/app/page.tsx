@@ -6,6 +6,8 @@ interface User {
   id: number;
   name: string;
   email: string;
+  arrival: string;
+  departure: string;
 }
 
 export default function Home() {
@@ -56,6 +58,12 @@ export default function Home() {
                   <th className="border border-gray-600 px-4 py-2 sm:w-1/2 md:w-auto lg:w-auto">
                     Email
                   </th>
+                  <th className="border border-gray-600 px-4 py-2 sm:w-1/2 md:w-auto lg:w-auto">
+                    Arrival Time
+                  </th>
+                  <th className="border border-gray-600 px-4 py-2 sm:w-1/2 md:w-auto lg:w-auto">
+                    Departure Time
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -66,6 +74,12 @@ export default function Home() {
                     </td>
                     <td className="border border-gray-600 px-4 py-2 sm:w-1/2 md:w-auto lg:w-auto">
                       {user.email}
+                    </td>
+                    <td className="border border-gray-600 px-4 py-2 sm:w-1/2 md:w-auto lg:w-auto">
+                      {user.arrival}
+                    </td>
+                    <td className="border border-gray-600 px-4 py-2 sm:w-1/2 md:w-auto lg:w-auto">
+                      {user.departure}
                     </td>
                   </tr>
                 ))}

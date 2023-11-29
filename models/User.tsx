@@ -7,6 +7,8 @@ const User = models.User || model('User', new Schema({
         required: true,
         unique: true,
     },
+    arrival: String,
+    departure: String,
 }));
 
 export default User;
